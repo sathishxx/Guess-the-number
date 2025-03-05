@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Press Start 2P', cursive;
+    background-image: 
+      linear-gradient(135deg, #2f343a, #1a1a1a),
+      url("https://www.example.com/path/to/your/retro-pixelated-background.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    animation: background-scroll 10s linear infinite;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  /* Pixelated Grid Effect */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.example.com/path/to/your/pixel-grid.png");
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Keyframes for scrolling background */
+  @keyframes background-scroll {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Main container */
+  .container {
+    background: linear-gradient(135deg, #222, #444);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 320px;
+    border: 5px solid #f39c12;
+    animation: glow 2s infinite;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 28px;
+    color: #f39c12;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #f39c12;
+  }
+  
+  /* Input Field */
+  input {
+    width: 70%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #f39c12;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Input field on focus */
+  input:focus {
+    outline: none;
+    border-color: #e67e22;
+    background-color: #444;
+    box-shadow: 0 0 10px #e67e22;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80%;
+    margin-top: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+  }
+  
+  /* Paragraphs for feedback */
+  p {
+    font-size: 20px;
+    margin-top: 15px;
+    text-shadow: 0 0 5px #fff;
+  }
+  
+  /* Result message */
+  #two {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Score styling */
+  #score {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f39c12;
+    text-shadow: 0 0 10px #f39c12;
+    animation: score-glow 2s infinite;
+  }
+  
+  /* Neon Glow Effect for Score */
+  #score {
+    color: #f39c12;
+    text-shadow: 0 0 15px #f39c12, 0 0 30px #f39c12, 0 0 60px #f39c12, 0 0 90px #e74c3c;
+  }
+  
+  /* Animations */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px #f39c12;
+    }
+    50% {
+      box-shadow: 0 0 20px #f39c12;
+    }
+    100% {
+      box-shadow: 0 0 10px #f39c12;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes score-glow {
+    0% {
+      text-shadow: 0 0 10px #f39c12;
+    }
+    50% {
+      text-shadow: 0 0 20px #f39c12, 0 0 30px #f39c12, 0 0 40px #e74c3c;
+    }
+    100% {
+      text-shadow: 0 0 10px #f39c12;
+    }
+  }
+  
